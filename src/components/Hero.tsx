@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-                Alex Johnson
+                Rehaan Kothari
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-medium">
                 Aspiring Mechanical Engineer

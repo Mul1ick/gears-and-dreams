@@ -23,7 +23,7 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-sm opacity-90">
-            © 2024 Alex Johnson. Built with passion for engineering and innovation.
+            © 2024 Rehaan Kothari. Built with passion for engineering and innovation.
           </p>
         </div>
       </footer>
