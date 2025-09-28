@@ -36,17 +36,27 @@ All colors MUST be HSL.
     --input: 210 20% 88%;
     --ring: 210 90% 16%;
 
-    /* Engineering Portfolio Design System */
-    --gradient-primary: linear-gradient(135deg, hsl(210 90% 16%), hsl(210 85% 22%));
-    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%), hsl(25 90% 60%));
+    /* Mechanical Engineering Design System */
+    --gradient-primary: linear-gradient(135deg, hsl(210 90% 16%), hsl(200 85% 22%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%), hsl(35 90% 60%));
+    --gradient-mechanical: linear-gradient(45deg, hsl(210 90% 16%), hsl(190 80% 25%), hsl(25 85% 55%));
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 98%), hsl(210 15% 96%));
+    --gradient-technical: linear-gradient(135deg, hsl(210 15% 94%), hsl(200 20% 96%));
     
     --shadow-soft: 0 4px 20px -4px hsl(210 30% 20% / 0.08);
     --shadow-medium: 0 8px 30px -6px hsl(210 30% 20% / 0.12);
     --shadow-strong: 0 20px 40px -12px hsl(210 30% 20% / 0.18);
+    --shadow-glow: 0 0 30px hsl(25 85% 55% / 0.15);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-mechanical: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+    /* Engineering Colors */
+    --steel-blue: 210 25% 35%;
+    --copper: 25 85% 55%;
+    --aluminum: 200 15% 85%;
+    --titanium: 210 10% 65%;
 
     --radius: 0.5rem;
 

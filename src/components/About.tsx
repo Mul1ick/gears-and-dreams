@@ -1,34 +1,35 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Wrench, Target, Lightbulb, Users } from "lucide-react";
+import { Cog, Zap, Lightbulb, Users, Wrench, Gauge } from "lucide-react";
 
 const About = () => {
   const values = [
     {
+      icon: <Cog className="h-6 w-6" />,
+      title: "Systems Thinker",
+      description: "I analyze complex mechanical systems and optimize their performance through systematic engineering."
+    },
+    {
+      icon: <Gauge className="h-6 w-6" />,
+      title: "Precision Engineer",
+      description: "Every measurement matters - I apply rigorous engineering principles to ensure optimal results."
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "Innovation Driver",
+      description: "I leverage cutting-edge mechanical engineering to create breakthrough solutions."
+    },
+    {
       icon: <Wrench className="h-6 w-6" />,
-      title: "Problem Solver",
-      description: "I approach every challenge with analytical thinking and creative solutions."
-    },
-    {
-      icon: <Target className="h-6 w-6" />,
-      title: "Detail-Oriented",
-      description: "Precision and accuracy are crucial in engineering - I never compromise on quality."
-    },
-    {
-      icon: <Lightbulb className="h-6 w-6" />,
-      title: "Innovative",
-      description: "I'm passionate about pushing boundaries and exploring new technologies."
-    },
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Team Player",
-      description: "Great engineering happens through collaboration and effective communication."
+      title: "Hands-On Builder",
+      description: "From CAD design to physical prototyping - I bring mechanical concepts to life."
     }
   ];
 
   const interests = [
-    "Robotics", "Sustainable Energy", "3D Printing", "CAD Design", 
-    "Materials Science", "Automation", "Renewable Energy", "Biomechanics"
+    "Mechanical Design", "Thermodynamics", "Fluid Mechanics", "CAD/CAM Systems", 
+    "Robotics Engineering", "Materials Science", "Manufacturing Processes", "Control Systems",
+    "Heat Transfer", "Machine Design", "Finite Element Analysis", "Mechatronics"
   ];
 
   return (
@@ -51,15 +52,17 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4 text-primary">My Journey</h3>
               <div className="space-y-4 text-foreground/80">
                 <p>
-                  From taking apart my first toy robot at age 8 to designing my own mechanical 
-                  systems today, engineering has always been my passion. I've spent countless 
-                  hours learning about how things work and how to make them better.
+                  My fascination with mechanical engineering began when I disassembled my first 
+                  mechanical clock at age 9, captivated by the precision of gears, springs, and 
+                  mechanisms working in perfect harmony. This curiosity evolved into a deep passion 
+                  for understanding and designing mechanical systems.
                 </p>
                 <p>
-                  Throughout high school, I've maintained a 4.0 GPA while actively participating 
-                  in STEM clubs, robotics competitions, and engineering summer programs. My goal 
-                  is to pursue mechanical engineering at a top university and eventually work on 
-                  cutting-edge technologies that solve real-world problems.
+                  Throughout high school, I've excelled in advanced physics, calculus, and 
+                  engineering courses while leading hands-on projects in robotics and mechanical 
+                  design. My goal is to pursue mechanical engineering at a top-tier university, 
+                  specializing in areas like thermodynamics, fluid mechanics, and advanced 
+                  manufacturing technologies.
                 </p>
               </div>
             </Card>
@@ -86,9 +89,9 @@ const About = () => {
                 key={index} 
                 className="p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300 hover:scale-105"
               >
-                <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground">
-                  {value.icon}
-                </div>
+              <div className="w-14 h-14 bg-gradient-mechanical rounded-full flex items-center justify-center mx-auto mb-4 text-primary-foreground shadow-glow">
+                {value.icon}
+              </div>
                 <h4 className="text-lg font-semibold mb-2 text-primary">{value.title}</h4>
                 <p className="text-sm text-muted-foreground">{value.description}</p>
               </Card>

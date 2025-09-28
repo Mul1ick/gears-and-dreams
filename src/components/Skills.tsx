@@ -1,61 +1,63 @@
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { Code, Wrench, Brain, Users } from "lucide-react";
+import { Cog, Wrench, Brain, Users, Calculator, Zap, Settings, Thermometer } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
       icon: <Wrench className="h-6 w-6" />,
+      title: "Mechanical Design",
+      color: "bg-gradient-mechanical",
+      skills: [
+        { name: "SolidWorks/CAD", level: 90 },
+        { name: "AutoCAD", level: 85 },
+        { name: "3D Printing/Prototyping", level: 88 },
+        { name: "CNC Machining", level: 75 }
+      ]
+    },
+    {
+      icon: <Calculator className="h-6 w-6" />,
+      title: "Engineering Analysis",
+      color: "bg-gradient-accent",
+      skills: [
+        { name: "MATLAB/Simulink", level: 80 },
+        { name: "Finite Element Analysis", level: 70 },
+        { name: "Thermodynamics", level: 85 },
+        { name: "Fluid Mechanics", level: 75 }
+      ]
+    },
+    {
+      icon: <Settings className="h-6 w-6" />,
+      title: "Manufacturing & Controls",
+      color: "bg-gradient-primary",
+      skills: [
+        { name: "PLC Programming", level: 75 },
+        { name: "Process Control", level: 80 },
+        { name: "Quality Control", level: 85 },
+        { name: "Lean Manufacturing", level: 70 }
+      ]
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
       title: "Technical Skills",
-      color: "bg-gradient-primary",
-      skills: [
-        { name: "SolidWorks/CAD", level: 85 },
-        { name: "3D Printing", level: 90 },
-        { name: "Electronics", level: 75 },
-        { name: "Machining", level: 70 }
-      ]
-    },
-    {
-      icon: <Code className="h-6 w-6" />,
-      title: "Programming",
       color: "bg-gradient-accent",
       skills: [
-        { name: "Python", level: 80 },
-        { name: "C++/Arduino", level: 85 },
-        { name: "MATLAB", level: 65 },
-        { name: "JavaScript", level: 60 }
-      ]
-    },
-    {
-      icon: <Brain className="h-6 w-6" />,
-      title: "Engineering Concepts",
-      color: "bg-gradient-primary",
-      skills: [
-        { name: "Thermodynamics", level: 80 },
-        { name: "Mechanics", level: 85 },
-        { name: "Materials Science", level: 75 },
-        { name: "Control Systems", level: 70 }
-      ]
-    },
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Soft Skills",
-      color: "bg-gradient-accent",
-      skills: [
-        { name: "Leadership", level: 90 },
-        { name: "Problem Solving", level: 95 },
-        { name: "Communication", level: 85 },
-        { name: "Teamwork", level: 90 }
+        { name: "Python/MATLAB", level: 85 },
+        { name: "C++/Arduino", level: 80 },
+        { name: "Circuit Design", level: 75 },
+        { name: "Data Analysis", level: 90 }
       ]
     }
   ];
 
   const certifications = [
-    "SolidWorks Certified Associate (CSWA)",
-    "Arduino Programming Certificate",
-    "OSHA Safety Training",
-    "First Aid/CPR Certified"
+    "SolidWorks Certified Professional (CSWP)",
+    "AutoCAD Certified User",
+    "MATLAB Programming Certificate",
+    "CNC Machining Fundamentals",
+    "PLC Programming Basics",
+    "OSHA Safety Training"
   ];
 
   return (
@@ -110,12 +112,12 @@ const Skills = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {certifications.map((cert, index) => (
               <Badge 
                 key={index} 
                 variant="secondary" 
-                className="p-3 text-center justify-center hover:bg-accent/20 transition-colors duration-200"
+                className="p-3 text-center justify-center hover:bg-accent/20 transition-colors duration-200 hover:shadow-glow"
               >
                 {cert}
               </Badge>

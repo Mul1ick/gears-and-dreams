@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowDown, Mail, Download } from "lucide-react";
+import { ArrowDown, Mail, Download, Cog, Wrench, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-engineering.jpg";
+import mechanicalPattern from "@/assets/mechanical-pattern.jpg";
 
 const Hero = () => {
   return (
@@ -16,11 +17,27 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-primary opacity-5"></div>
       </div>
       
-      {/* Geometric Background Elements */}
+      {/* Mechanical Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-primary/10 rotate-45"></div>
-        <div className="absolute bottom-32 right-32 w-24 h-24 border-2 border-accent/20 rotate-12"></div>
-        <div className="absolute top-1/2 left-10 w-16 h-16 bg-accent/5 rotate-45"></div>
+        <img 
+          src={mechanicalPattern} 
+          alt="Mechanical engineering pattern" 
+          className="absolute top-0 right-0 w-1/2 h-full object-cover opacity-3"
+        />
+        
+        {/* Floating Mechanical Icons */}
+        <div className="absolute top-20 left-20 text-primary/5 animate-spin" style={{ animationDuration: '20s' }}>
+          <Cog size={120} />
+        </div>
+        <div className="absolute bottom-32 right-32 text-accent/10 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
+          <Cog size={80} />
+        </div>
+        <div className="absolute top-1/2 left-10 text-steel/10">
+          <Wrench size={60} className="rotate-45" />
+        </div>
+        <div className="absolute top-1/3 right-20 text-copper/10">
+          <Zap size={40} className="animate-pulse" />
+        </div>
       </div>
 
       <div className="container mx-auto px-6 z-10 text-center">

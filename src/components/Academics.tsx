@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Award, BookOpen, Trophy } from "lucide-react";
+import { GraduationCap, Award, BookOpen, Trophy, Calculator, Cog, Wrench, Zap } from "lucide-react";
 
 const Academics = () => {
   const achievements = [
@@ -16,32 +16,32 @@ const Academics = () => {
     },
     {
       icon: <BookOpen className="h-6 w-6" />,
-      title: "STEM Coursework",
+      title: "Engineering Coursework",
       items: [
-        "AP Physics C: Mechanics (5)",
+        "AP Physics C: Mechanics & E&M (5, 5)",
         "AP Calculus BC (5)",
-        "AP Chemistry (4)",
-        "Engineering Design & Analysis"
+        "Engineering Design & Analysis",
+        "Thermodynamics Fundamentals"
       ]
     },
     {
       icon: <Trophy className="h-6 w-6" />,
-      title: "Competitions & Awards",
+      title: "Engineering Competitions",
       items: [
-        "1st Place - Regional Science Fair",
-        "State Qualifier - Math Olympiad",
-        "Dean's List - Summer Engineering Program",
-        "Best Technical Project - STEM Expo"
+        "1st Place - State Engineering Design Challenge",
+        "Regional Champion - Robotics Competition",
+        "National Qualifier - Science Olympiad",
+        "Outstanding Technical Project - STEM Fair"
       ]
     },
     {
-      icon: <Award className="h-6 w-6" />,
-      title: "Leadership & Activities",
+      icon: <Cog className="h-6 w-6" />,
+      title: "Engineering Leadership",
       items: [
-        "Robotics Team Captain",
-        "Math Tutoring Volunteer (100+ hours)",
-        "STEM Club Vice President",
-        "Engineering Summer Camp Counselor"
+        "Robotics Team Lead Engineer",
+        "Engineering Club President",
+        "Peer Tutor - Physics & Math (120+ hours)",
+        "Summer Engineering Camp Instructor"
       ]
     }
   ];
@@ -75,9 +75,9 @@ const Academics = () => {
               className="p-6 shadow-soft hover:shadow-medium transition-all duration-300 bg-card/80 backdrop-blur-sm"
             >
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mr-4 text-primary-foreground">
-                  {category.icon}
-                </div>
+              <div className="w-12 h-12 bg-gradient-mechanical rounded-full flex items-center justify-center mr-4 text-primary-foreground shadow-glow">
+                {category.icon}
+              </div>
                 <h3 className="text-xl font-semibold text-primary">{category.title}</h3>
               </div>
               

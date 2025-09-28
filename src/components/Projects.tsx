@@ -1,30 +1,33 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Award } from "lucide-react";
+import { ExternalLink, Github, Award, Cog, Zap, Thermometer, Settings } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Autonomous Line-Following Robot",
-      description: "Designed and built a robot using Arduino and sensors that can navigate complex paths autonomously. Implemented PID control for smooth movement and obstacle avoidance.",
-      technologies: ["Arduino", "C++", "3D Printing", "Electronics"],
+      title: "Automated CNC Mill Controller",
+      description: "Designed and programmed a precision CNC milling machine controller using servo motors and feedback systems. Achieved 0.01mm positioning accuracy with custom PID control algorithms.",
+      technologies: ["CNC Programming", "Servo Control", "G-Code", "Precision Machining"],
       status: "Completed",
-      achievements: ["1st Place - Regional Robotics Competition", "Featured in School Newsletter"]
+      achievements: ["1st Place - Regional Engineering Fair", "Featured in Local Tech Magazine"],
+      icon: <Settings className="h-5 w-5" />
     },
     {
-      title: "Solar-Powered Water Purification System",
-      description: "Developed a prototype for a sustainable water purification system using solar energy. Created detailed CAD models and performed efficiency calculations.",
-      technologies: ["SolidWorks", "Solar Energy", "Filtration Systems", "Sustainability"],
+      title: "Thermodynamic Heat Engine Prototype",
+      description: "Built a working Stirling engine prototype with efficiency analysis and thermal optimization. Conducted comprehensive performance testing and heat transfer calculations.",
+      technologies: ["Thermodynamics", "Heat Transfer", "CAD Design", "Materials Analysis"],
       status: "In Progress",
-      achievements: ["Science Fair Finalist", "Environmental Impact Award"]
+      achievements: ["Science Fair State Qualifier", "Thermal Efficiency Award"],
+      icon: <Thermometer className="h-5 w-5" />
     },
     {
-      title: "Mechanical Arm Prototype",
-      description: "Built a servo-controlled mechanical arm with 4 degrees of freedom. Programmed precise movements and implemented remote control capabilities.",
-      technologies: ["Servo Motors", "Python", "3D Design", "Control Systems"],
+      title: "Robotic Assembly Line System",
+      description: "Developed a multi-axis robotic system for automated assembly with pneumatic actuators and programmable logic controllers (PLCs). Integrated vision systems for quality control.",
+      technologies: ["Robotics", "PLC Programming", "Pneumatics", "Vision Systems"],
       status: "Completed",
-      achievements: ["STEM Club Project of the Year"]
+      achievements: ["Best Engineering Design - STEM Expo", "Industry Mentorship Award"],
+      icon: <Cog className="h-5 w-5" />
     }
   ];
 
@@ -50,9 +53,14 @@ const Projects = () => {
             >
               <div className="space-y-4">
                 <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold text-primary leading-tight">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-gradient-mechanical rounded-full flex items-center justify-center text-primary-foreground shadow-glow">
+                      {project.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-primary leading-tight">
+                      {project.title}
+                    </h3>
+                  </div>
                   <Badge 
                     variant={project.status === "Completed" ? "default" : "secondary"}
                     className="ml-2 shrink-0"
