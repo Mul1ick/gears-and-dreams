@@ -1,139 +1,98 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Award, Cog, Zap, Thermometer, Settings } from "lucide-react";
+import { Briefcase, FlaskConical, Wrench, Wind } from "lucide-react";
 
-const Projects = () => {
-  const projects = [
+const Experience = () => {
+  const experiences = [
     {
-      title: "Automated CNC Mill Controller",
-      description: "Designed and programmed a precision CNC milling machine controller using servo motors and feedback systems. Achieved 0.01mm positioning accuracy with custom PID control algorithms.",
-      technologies: ["CNC Programming", "Servo Control", "G-Code", "Precision Machining"],
-      status: "Completed",
-      achievements: ["1st Place - Regional Engineering Fair", "Featured in Local Tech Magazine"],
-      icon: <Settings className="h-5 w-5" />
+      title: "Research: Lean Manufacturing",
+      institution: "Supreme Gems (Diamond Unit), Mumbai",
+      description: "Implemented lean manufacturing principles by conducting time studies, waste analysis, VSM, and improving process flows.", // [cite: 4, 5]
+      tags: ["Time Studies", "Waste Analysis", "VSM", "Process Flow"], // [cite: 5]
+      icon: <Wrench className="h-5 w-5" />,
+      duration: "12 hr/wk, 20 wk/yr" // [cite: 3]
     },
     {
-      title: "Thermodynamic Heat Engine Prototype",
-      description: "Built a working Stirling engine prototype with efficiency analysis and thermal optimization. Conducted comprehensive performance testing and heat transfer calculations.",
-      technologies: ["Thermodynamics", "Heat Transfer", "CAD Design", "Materials Analysis"],
-      status: "In Progress",
-      achievements: ["Science Fair State Qualifier", "Thermal Efficiency Award"],
-      icon: <Thermometer className="h-5 w-5" />
+      title: "Internship: Valves Production",
+      institution: "Larsen & Toubro, Chennai",
+      description: "Gained hands-on experience in the design, sizing, materials, testing, and operations for various valve systems.", // [cite: 8, 9]
+      tags: ["Design", "Sizing", "Materials", "Testing", "Operations"], // [cite: 9]
+      icon: <Briefcase className="h-5 w-5" />,
+      duration: "30 hr/wk, 7 wk/yr (Grade 12 break)" // [cite: 7]
     },
     {
-      title: "Robotic Assembly Line System",
-      description: "Developed a multi-axis robotic system for automated assembly with pneumatic actuators and programmable logic controllers (PLCs). Integrated vision systems for quality control.",
-      technologies: ["Robotics", "PLC Programming", "Pneumatics", "Vision Systems"],
-      status: "Completed",
-      achievements: ["Best Engineering Design - STEM Expo", "Industry Mentorship Award"],
-      icon: <Cog className="h-5 w-5" />
+      title: "Internship: Robotic Cleaning Systems",
+      institution: "Solar-LIT, Khavda Renewable Energy Park, Kutch",
+      description: "Worked on an automatic robotic cleaning system for solar panels, focusing on AI-based dirt detection and eco-friendly efficiency improvements.", // [cite: 20, 21]
+      tags: ["AI", "Robotics", "Solar Energy", "Eco-friendly"], // [cite: 20, 21]
+      icon: <Wind className="h-5 w-5" />,
+      duration: "3 hr/wk, 25 wk/yr (Grades 11-12)" // [cite: 19]
+    },
+    {
+      title: "Research: Precious Metal Manufacturing",
+      institution: "Metal Craft Engineering, Mumbai",
+      description: "Conducted a detailed study of precious metal manufacturing, analyzing materials, design, production processes, and industrial applications.", // [cite: 16, 17]
+      tags: ["Materials", "Design", "Production", "Industrial Applications"], // [cite: 17]
+      icon: <FlaskConical className="h-5 w-5" />,
+      duration: "" 
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-subtle">
+    <section id="experience" className="py-20 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
-            Featured Projects
+            Experience & Research
           </h2>
           <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Here are some of the engineering projects I've worked on that demonstrate my 
-            passion for innovation and problem-solving.
+            Hands-on experience gained from internships and research projects in real-world engineering environments.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid lg:grid-cols-2 gap-8">
+          {experiences.map((exp, index) => (
             <Card 
               key={index} 
-              className="p-6 shadow-soft hover:shadow-strong transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur-sm"
+              className="p-6 shadow-soft hover:shadow-medium transition-all duration-300 bg-card/80 backdrop-blur-sm flex flex-col"
             >
-              <div className="space-y-4">
+              <div className="flex-grow space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-mechanical rounded-full flex items-center justify-center text-primary-foreground shadow-glow">
-                      {project.icon}
+                    <div className="w-10 h-10 bg-gradient-mechanical rounded-full flex items-center justify-center text-primary-foreground shadow-glow shrink-0">
+                      {exp.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-primary leading-tight">
-                      {project.title}
-                    </h3>
-                  </div>
-                  <Badge 
-                    variant={project.status === "Completed" ? "default" : "secondary"}
-                    className="ml-2 shrink-0"
-                  >
-                    {project.status}
-                  </Badge>
-                </div>
-
-                <p className="text-foreground/80 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="text-sm font-medium text-primary mb-2">Technologies Used</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {project.technologies.map((tech, techIndex) => (
-                        <Badge 
-                          key={techIndex} 
-                          variant="outline" 
-                          className="text-xs px-2 py-1"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-
-                  {project.achievements.length > 0 && (
                     <div>
-                      <h4 className="text-sm font-medium text-primary mb-2 flex items-center">
-                        <Award className="h-4 w-4 mr-1" />
-                        Achievements
-                      </h4>
-                      <ul className="space-y-1">
-                        {project.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className="text-xs text-accent font-medium">
-                            • {achievement}
-                          </li>
-                        ))}
-                      </ul>
+                      <h3 className="text-xl font-semibold text-primary leading-tight">
+                        {exp.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground font-medium">{exp.institution}</p>
                     </div>
-                  )}
+                  </div>
                 </div>
-
-                <div className="flex gap-2 pt-2">
-                  <Button size="sm" variant="outline" className="flex-1 text-xs">
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Details
-                  </Button>
-                  <Button size="sm" variant="outline" className="flex-1 text-xs">
-                    <Github className="h-3 w-3 mr-1" />
-                    Code
-                  </Button>
+                <p className="text-foreground/80 text-sm leading-relaxed">
+                  {exp.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {exp.tags.map((tag, tagIndex) => (
+                    <Badge key={tagIndex} variant="secondary" className="px-2 py-1 text-xs">
+                      {tag}
+                    </Badge>
+                  ))}
                 </div>
               </div>
+              {exp.duration && (
+                <div className="mt-4 pt-4 border-t border-border">
+                  <p className="text-xs text-muted-foreground text-right font-semibold">{exp.duration}</p>
+                </div>
+              )}
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <Card className="inline-block p-6 shadow-soft">
-            <p className="text-muted-foreground mb-4">
-              More projects and detailed documentation available upon request
-            </p>
-            <Button className="bg-gradient-accent hover:shadow-medium transition-all duration-300">
-              View Full Portfolio
-            </Button>
-          </Card>
         </div>
       </div>
     </section>
   );
 };
 
-export default Projects;
+export default Experience;

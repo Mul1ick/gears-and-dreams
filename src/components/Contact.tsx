@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Linkedin, Github, FileText } from "lucide-react";
+import profile_image from "./profile.png"
 
 const Contact = () => {
   const contactInfo = [
