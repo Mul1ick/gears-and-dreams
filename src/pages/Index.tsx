@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { FileText, ArrowRight, Video } from "lucide-react"; // Added Video icon
-import profile from '../components/profile.png'
+import profile from '../components/new_profile.jpeg'
+// import FO1 from './pdfs'
 
 // Import your images from the assets folder
 import researchImg from "@/assets/ResearchPaper.jpg";
@@ -37,7 +38,8 @@ const Index = () => {
       imgSrc: firmImg,
       description: "Internship focused on the valves production process at Larsen & Toubro.",
       modalLinks: [
-        { label: "View Certificate", icon: <FileText size={48} />, url: "/pdfs/lt-internship-cert.pdf" },
+        { label: "View Certificate", icon: <FileText size={48} />, url: "./pdfs/firmObservation1.pdf" },
+        { label: "View Certificate", icon: <FileText size={48} />, url: "./pdfs/firmObservation2.pdf" },
       ]
     },
     {
@@ -78,7 +80,7 @@ const Index = () => {
                <img
                  src={profile}
                  alt="Rehaan Kothari"
-                 className="w-48 h-56 object-contain rounded-lg border-4 border-slate-200"
+                 className="w-48 h-56 object-contain rounded-lg border-slate-200"
                />
              </div>
              <div className="md:col-span-2 text-center md:text-left">
@@ -89,7 +91,7 @@ const Index = () => {
                  Aspiring Mechanical Engineer
                </p>
                <p className="mt-4 text-slate-700">
-                 A passionate and detail-oriented student with hands-on internship and research experience in manufacturing processes, robotics, and system optimization.
+                 Hi, I’m Rehaan Kothari, a curiosity is my Superpower! I think the world is a giant puzzle that yet to be solved. Math and physics are my favourite my favourite instruments  and would like to experiment, investigate and develop projects. When I’m not solving I kick goals or practice my martial arts moves! I think curiosity fuels creativity and that’s the reason every project is exciting. Take a look at my researches, experiences and projects.
                </p>
                <Button className="mt-6">
                  <FileText className="mr-2 h-4 w-4" />
