@@ -178,14 +178,15 @@ const Index = () => {
       description: "Implemented lean manufacturing principles at a diamond processing unit.",
       modalLinks: [
         { label: "View Paper", icon: <FileText size={48} />, url: "/pdfs/research-paper.pdf" },
+        { label: "View Award", icon: <FileText size={48} />, url: "/pdfs/goldCrestAward.pdf" },
       ]
     },
     {
-      title: "Lead Platinum",
+      title: "Leed Platinum",
       imgSrc: platinumImg,
       description: "A study of precious metal manufacturing processes.",
       modalLinks: [
-        { label: "View Report", icon: <FileText size={48} />, url: "/pdfs/lead-platinum-report.pdf" },
+        { label: "Leed Platinum Certification", icon: <FileText size={48} />, url: "/pdfs/leed-platinum.pdf" },
       ]
     },
     {
@@ -193,8 +194,9 @@ const Index = () => {
       imgSrc: firmImg,
       description: "Internship focused on the valves production process at Larsen & Toubro.",
       modalLinks: [
-        { label: "View Certificate", icon: <FileText size={48} />, url: "/pdfs/firmObservation1.pdf" },
-        { label: "View Certificate", icon: <FileText size={48} />, url: "/pdfs/firmObservation2.pdf" },
+        { label: "Larsen & Tubro", icon: <FileText size={48} />, url: "/pdfs/firmObservation1.pdf" },
+        { label: "Metal Craft Engineering", icon: <FileText size={48} />, url: "/pdfs/firmObservation2.pdf" },
+        { label: "Solar-Lit", icon: <FileText size={48} />, url: "/pdfs/firmObservation3.pdf" },
       ]
     },
     {
@@ -218,7 +220,7 @@ const Index = () => {
       imgSrc: martialArtsImg,
       description: "Achieved Black Belt (3rd Dan) and multiple interschool competition medals.",
       modalLinks: [
-        { label: "View Certificates", icon: <FileText size={48} />, url: "/pdfs/karate-certs.pdf" },
+        { label: "View Certificates", icon: <FileText size={48} />, url: "/pdfs/martial-arts.pdf" },
         { label: "Watch Videos", icon: <Video size={48} />, url: "#" }, // You can link to a video here
       ]
     }
@@ -246,17 +248,18 @@ const Index = () => {
                  Aspiring Mechanical Engineer
                </p>
                <p className="mt-4 text-slate-700">
-                 Hi, I’m Rehaan Kothari, a curiosity is my Superpower!
- I think the world is a giant puzzle that yet to be solved.
- Math and physics are my favourite my favourite instruments  and would like to experiment, investigate and develop projects.
- When I’m not solving I kick goals or practice my martial arts moves!
- I think curiosity fuels creativity and that’s the reason every project is exciting.
- Take a look at my researches, experiences and projects.
+                 Hi, I’m Rehaan Kothari, curiosity is my Superpower! I think of the world as a giant puzzle that is yet to be solved. Math and physics are my favourite instruments and  I would like to experiment, investigate and develop projects. When I’m not busy solving, I score goals or practice my martial arts moves! I think curiosity fuels creativity and that’s the reason every project is exciting. Take a look at my researches, experiences and projects.
                </p>
-               <Button className="mt-6">
-                 <FileText className="mr-2 h-4 w-4" />
-                 View Resume
-               </Button>
+              <Button className="mt-6" asChild>
+  <a 
+    href="/pdfs/REHAAN KOTHARI.pdf" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    <FileText className="mr-2 h-4 w-4" />
+    View Resume
+  </a>
+</Button>
              </div>
            </div>
          </Card>
@@ -276,28 +279,28 @@ const Index = () => {
                       <p className="mt-1 text-sm opacity-90">{card.description}</p>
                       <DialogTrigger asChild>
                         <Button variant="outline" className="mt-4 w-fit bg-transparent text-white border-white hover:bg-white hover:text-black">
-                          Details <ArrowRight className="ml-2 h-4 w-4" />
+                          View <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </DialogTrigger>
                     </div>
                   </div>
                 </Card>
                 {/* NEW: This is the updated pop-up content */}
-                <DialogContent className="sm:max-w-md">
+                <DialogContent className="sm:max-w-2xl">
                   <DialogHeader>
                     <DialogTitle className="text-2xl text-center">{card.title}</DialogTitle>
                   </DialogHeader>
-                  <div className="flex justify-center items-center gap-8 py-8">
+                  <div className="flex flex-wrap justify-center items-start gap-8 py-8">
                     {card.modalLinks.map((link, linkIndex) => (
                       <a 
                         key={linkIndex} 
                         href={link.url} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center gap-2 text-slate-700 hover:text-blue-600 transition-colors"
+                        className="flex flex-col items-center gap-2 text-slate-700 hover:text-blue-600 transition-colors w-40"
                       >
                         {link.icon}
-                        <span className="font-semibold">{link.label}</span>
+                        <span className="font-semibold text-center">{link.label}</span>
                       </a>
                     ))}
                   </div>
