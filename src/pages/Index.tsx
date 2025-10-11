@@ -179,16 +179,17 @@ const Index = () => {
       modalLinks: [
         { label: "View Paper", icon: <FileText size={48} />, url: "/pdfs/research-paper.pdf" },
         { label: "View Award", icon: <FileText size={48} />, url: "/pdfs/goldCrestAward.pdf" },
+        { label: "Leed Platinum Certification", icon: <FileText size={48} />, url: "/pdfs/leed-platinum.pdf" }
       ]
     },
-    {
-      title: "Leed Platinum",
-      imgSrc: platinumImg,
-      description: "A study of precious metal manufacturing processes.",
-      modalLinks: [
-        { label: "Leed Platinum Certification", icon: <FileText size={48} />, url: "/pdfs/leed-platinum.pdf" },
-      ]
-    },
+    // {
+    //   title: "Leed Platinum",
+    //   imgSrc: platinumImg,
+    //   description: "A study of precious metal manufacturing processes.",
+    //   modalLinks: [
+    //     { label: "Leed Platinum Certification", icon: <FileText size={48} />, url: "/pdfs/leed-platinum.pdf" },
+    //   ]
+    // },
     {
       title: "Firm Observation",
       imgSrc: firmImg,
@@ -221,7 +222,7 @@ const Index = () => {
       description: "Achieved Black Belt (3rd Dan) and multiple interschool competition medals.",
       modalLinks: [
         { label: "View Certificates", icon: <FileText size={48} />, url: "/pdfs/martial-arts.pdf" },
-        { label: "Watch Videos", icon: <Video size={48} />, url: "#" }, // You can link to a video here
+        { label: "Read About My Journey", icon: <FileText size={48} />, url: "/pdfs/Journey.pdf" }, // You can link to a video here
       ]
     }
   ];
