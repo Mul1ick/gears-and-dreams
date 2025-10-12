@@ -205,7 +205,7 @@ const Index = () => {
       imgSrc: empowermentImg,
       description: "Community-focused projects to support and empower local groups.",
       modalLinks: [
-        { label: "Project Details", icon: <FileText size={48} />, url: "#" }, // Update this URL
+        { label: "Read About It", icon: <FileText size={48} />, url: "/pdfs/Teaching Karate.pdf" }, // Update this URL
       ]
     },
     {
@@ -213,7 +213,7 @@ const Index = () => {
       imgSrc: communityImg,
       description: "Led donation drives and social initiatives as Director of the Interact Club.",
       modalLinks: [
-        { label: "View Certificate", icon: <FileText size={48} />, url: "/pdfs/community-cert.pdf" },
+        { label: "View My Experience", icon: <FileText size={48} />, url: "/pdfs/Community engagement.pdf" },
       ]
     },
     {
