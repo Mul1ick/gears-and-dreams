@@ -205,7 +205,7 @@ const Index = () => {
       imgSrc: empowermentImg,
       description: "Community-focused projects to support and empower local groups.",
       modalLinks: [
-        { label: "Read About It", icon: <FileText size={48} />, url: "/pdfs/Teaching Karate.pdf" }, // Update this URL
+        { label: "Read About It", icon: <FileText size={48} />, url: "/pdfs/Teaching_karate.pdf" }, // Update this URL
       ]
     },
     {
